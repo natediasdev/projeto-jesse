@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Jessé - Pequeno Pesquisador de Animais</title>
+</head>
+<body>
+  <main>
+    <header class="navigation">
+      <nav>
+        <ul>
+          <a href="#inicial">Início</a>
+          <a href="#about">Sobre o Jessé</a>
+          <a href="#diferenciais">Descobertas</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="inicial visible" id="inicial">
+      <h1>Explorando a Natureza com Jessé</h1>
+      <h2>Um pequeno cientista apaixonado por animais!</h2>
+      <a class="btn" href="#about">Conheça a jornada</a>
+    </section>
+
+    <section class="about" id="about">
+      <h1>Sobre o Jessé</h1>
+      <p>Jessé é um garoto curioso e cheio de energia que ama explorar florestas, rios e montanhas em busca de animais incríveis. Desde pequeno, seu sonho é ser um grande biólogo. Com lupa na mão e caderno de anotações no bolso, ele registra cada descoberta com brilho nos olhos.</p>
+      <p>Este site é um espaço para compartilhar suas aventuras, fotos de animais que ele encontra e curiosidades do mundo natural.</p>
+    </section>
+
+    <section class="cta">
+      <h1>Quer acompanhar as aventuras do Jessé?</h1>
+      <p>Assine a newsletter ou envie uma mensagem com sugestões de animais para ele pesquisar!</p>
+    </section>
+
+    <section id="features">
+      <h1>Descobertas do Jessé</h1>
+      <p>Conheça mais animais que o Jessé pesquisou em suas aventuras pelo mundo:</p>
+      <div class="feature-grid">
+      
+        <div class="feature-card" style="--bg-image: url('https://images.pexels.com/photos/7528077/pexels-photo-7528077.jpeg');">
+          <div class="feature-content">
+            <h3>Guepardo</h3>
+            <p>O guepardo é o animal terrestre mais rápido do mundo, chegando a até 110 km/h com sua coluna móvel e patas potentes!</p>
+          </div>
+        </div>
+
+        <div class="feature-card" style="--bg-image: url('https://images.pexels.com/photos/32896689/pexels-photo-32896689.jpeg');">
+          <div class="feature-content">
+            <h3>Bicho‑preguiça</h3>
+            <p>Esse animal se move cerca de 1 metro por minuto e dorme até 20 horas por dia, mostrando a Jessé que observar o mundo com calma também importa!</p>
+          </div>
+        </div>
+
+        <div class="feature-card" style="--bg-image: url('https://images.pexels.com/photos/3150271/pexels-photo-3150271.jpeg');">
+          <div class="feature-content">
+            <h3>Tartaruga marinha</h3>
+            <p>Vive por mais de 80 anos e sempre retorna à praia onde nasceu para botar seus ovos — a incrível bússola natural da tartaruga fascinou o Jessé.</p>
+          </div>
+        </div>
+
+        <div class="feature-card" style="--bg-image: url('https://images.pexels.com/photos/51964/humpback-whale-natural-spectacle-nature-mammal-51964.jpeg');">
+          <div class="feature-content">
+            <h3>Baleia‑jubarte</h3>
+            <p>É conhecida por saltos espetaculares e migrações longas. Jessé descobriu que essas baleias se comunicam com cantos poderosos sob o mar!</p>
+          </div>
+        </div>
+        <div class="feature-card" style="--bg-image: url('https://images.pexels.com/photos/6530409/pexels-photo-6530409.jpeg');">
+          <div class="feature-content">
+            <h3>Tubarão-baleia</h3>
+            <p>O maior peixe do mundo, o tubarão-baleia pode medir mais de 12 metros e se alimenta apenas de plâncton!</p>
+          </div>
+        </div>
+
+        <div class="feature-card" style="--bg-image: url('https://images.pexels.com/photos/13525965/pexels-photo-13525965.jpeg');">
+          <div class="feature-content">
+            <h3>Carambola-do-mar</h3>
+            <p>Essa estrela-do-mar pode regenerar seus braços se os perder — e alguns indivíduos têm até 40 deles!</p>
+          </div>
+        </div>
+
+        <div class="feature-card" style="--bg-image: url('https://images.pexels.com/photos/18201360/pexels-photo-18201360.jpeg');">
+          <div class="feature-content">
+            <h3>Aves-do-paraíso</h3>
+            <p>Essas aves são conhecidas por suas danças exóticas e penas coloridas, usadas para conquistar parceiras.</p>
+          </div>
+        </div>
+
+        <div class="feature-card" style="--bg-image: url('https://images.pexels.com/photos/22912065/pexels-photo-22912065.jpeg');">
+          <div class="feature-content">
+            <h3>Baleia-azul</h3>
+            <p>O maior animal que já existiu na Terra! Seu coração é do tamanho de um carro pequeno.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <h1>Quer falar com o Jessé?</h1>
+      <p>Envie uma mensagem contando qual animal você gostaria que ele pesquisasse:</p>
+      <form onsubmit="enviarWhatsapp(); return false;">
+        <label for="nome">Seu nome:</label>
+        <input type="text" id="nome" required />
+
+        <label for="animal">Animal sugerido:</label>
+        <input type="text" id="animal" required />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" required></textarea>
+
+        <button type="submit" class="btn">Enviar para o Jessé</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 Explorador Jessé – Todos os direitos reservados</p>
+    </footer>
+  </main>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('section').forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight * 0.65) {
+          sec.classList.add('visible');
+        }
+      });
+    });
+
+    function enviarWhatsapp() {
+      const nome = document.getElementById("nome").value;
+      const animal = document.getElementById("animal").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      const texto = `Olá, meu nome é ${nome}! Gostaria de sugerir que o Jessé pesquise sobre: ${animal}. Minha mensagem: ${mensagem}`;
+      const url = `https://wa.me/SEU_NUMERO_AQUI?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
